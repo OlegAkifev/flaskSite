@@ -1,4 +1,4 @@
-from flask import Blueprint
+from flask import Blueprint, render_template
 
 report = Blueprint(
     'report',
@@ -11,5 +11,5 @@ report = Blueprint(
 
 @report.route('/')
 def report_list():
-    return 'Hello Report!'
+    return render_template('report/list.html', reports=[1, 2, 3, 4, 5])
 
